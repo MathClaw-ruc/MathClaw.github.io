@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathClaw 核心模块</title>
+  <meta name="description" content="MathClaw 核心模块页：按页面与功能查看解题、学习计划、记忆图谱、运行状态、心跳与 Skills。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="../">
+        <img src="../assets/logo.png" alt="MathClaw logo">
+        <span>MathClaw</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav">
+        <a href="../">首页</a>
+        <a href="../guide/">指南</a>
+        <a class="is-active" href="./">模块</a>
+        <a href="../deploy/">部署</a>
+        <a href="https://github.com/MathClaw-ruc/MathClaw" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="lang-switch" href="../en/modules/">EN</a>
+        <button class="theme-toggle" type="button" aria-label="切换主题">◐</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero">
+        <div class="page-hero-copy">
+          <span class="eyebrow">Modules</span>
+          <h1>把页面能力拆成更清晰的产品模块</h1>
+          <p>
+            MathClaw 的前端不是一页聊天框，而是由学生侧工作区与管理侧面板共同组成。
+            这一页按模块展示它们分别解决什么问题，以及界面如何落到真实产品里。
+          </p>
+        </div>
+        <div class="page-hero-side">
+          <div class="metric-list">
+            <div class="metric-row"><strong>学生侧</strong><span>解题 / 计划 / 记忆</span></div>
+            <div class="metric-row"><strong>管理侧</strong><span>运行 / 心跳 / Skills / MCP</span></div>
+            <div class="metric-row"><strong>图谱</strong><span>知识图谱 + 错题图谱</span></div>
+            <div class="metric-row"><strong>输出</strong><span>附件回复风格追加</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Module Showcase</span>
+          <h2>核心页面</h2>
+        </div>
+        <div class="module-grid">
+          <article class="module-showcase">
+            <img src="../assets/screenshots/workspace.png" alt="解题工作台">
+            <div>
+              <h3>解题工作台</h3>
+              <p>单对话工作台支持上传图片 / PDF、结构化讲解、批改结果和后续追问，是学生使用频率最高的主界面。</p>
+              <ul>
+                <li>单对话模式，减少历史会话干扰</li>
+                <li>支持表格、列表、讲解结构化输出</li>
+                <li>附件上传与输入框合并在同一工作流里</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="module-showcase">
+            <img src="../assets/screenshots/study_plan.png" alt="学习计划">
+            <div>
+              <h3>学习计划</h3>
+              <p>把今日状态、本周计划、明日建议、优先复习知识点与重点纠错方向整合成一页行动面板。</p>
+              <ul>
+                <li>学生能快速看到今天先学什么</li>
+                <li>纠错方向和复习点明确分层</li>
+                <li>界面强调行动建议而不是纯文档堆砌</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="module-showcase">
+            <img src="../assets/screenshots/knowledge_graph.png" alt="知识图谱">
+            <div>
+              <h3>知识图谱 / 错题图谱</h3>
+              <p>知识图谱强调学习结构，错题图谱强调错误模式，两者共享同一套图形语言，但颜色和诊断语义不同。</p>
+              <ul>
+                <li>焦点视图突出当前主线</li>
+                <li>节点标签和风险徽标有避让规则</li>
+                <li>右侧详情卡承接掌握度、严重度和建议动作</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="module-showcase">
+            <img src="../assets/screenshots/runtime_status.png" alt="运行状态">
+            <div>
+              <h3>运行状态 / 心跳 / Skills</h3>
+              <p>运行状态页负责系统健康，心跳页负责自动任务节律，Skills 页负责附件回复中的附加输出风格。</p>
+              <ul>
+                <li>适合管理者快速判断系统是否稳定</li>
+                <li>把可运行性、自动化和教学风格拆开管理</li>
+                <li>页面样式保持统一，但语义明确区分</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Module Matrix</span>
+          <h2>模块矩阵</h2>
+        </div>
+        <div class="module-matrix">
+          <article class="module-matrix-card">
+            <h3>学生工作台</h3>
+            <p>解题工作台、学习计划、记忆图谱</p>
+            <div class="inline-tags">
+              <span>学习主线</span>
+              <span>补弱复盘</span>
+            </div>
+          </article>
+          <article class="module-matrix-card">
+            <h3>管理控制台</h3>
+            <p>运行状态、心跳、Skills、MCP、模型配置</p>
+            <div class="inline-tags">
+              <span>监控</span>
+              <span>管理</span>
+            </div>
+          </article>
+          <article class="module-matrix-card">
+            <h3>多通道层</h3>
+            <p>企业微信、QQ、飞书和 Web Console 共用同一套代理与记忆体系。</p>
+            <div class="inline-tags">
+              <span>统一代理</span>
+              <span>多入口</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>MathClaw Modules. Built for mathematics learning workflows.</p>
+    </footer>
+  </div>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

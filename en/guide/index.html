@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathClaw Guide</title>
+  <meta name="description" content="MathClaw guide: the shortest path from repository setup to workspace, gateway, console, and memory flow.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../assets/logo.png">
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="../">
+        <img src="../../assets/logo.png" alt="MathClaw logo">
+        <span>MathClaw</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav">
+        <a href="../">Home</a>
+        <a class="is-active" href="./">Guide</a>
+        <a href="../modules/">Modules</a>
+        <a href="../deploy/">Deploy</a>
+        <a href="https://github.com/MathClaw-ruc/MathClaw" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="lang-switch" href="../../guide/">中文</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">◐</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero">
+        <div class="page-hero-copy">
+          <span class="eyebrow">Guide</span>
+          <h1>The shortest path from repository to workspace</h1>
+          <p>
+            This page turns MathClaw into an executable setup sequence:
+            prepare the workspace, start the gateway, launch the console, and understand how sessions, memory, graphs, and heartbeat connect together.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#start">Start Setup</a>
+            <a class="button button-secondary" href="../modules/">See Modules</a>
+          </div>
+        </div>
+        <div class="page-hero-side">
+          <div class="metric-list">
+            <div class="metric-row"><strong>Entry</strong><span>gateway + console</span></div>
+            <div class="metric-row"><strong>Data</strong><span>workspace / memory / graphs</span></div>
+            <div class="metric-row"><strong>UI</strong><span>student pages + operator pages</span></div>
+            <div class="metric-row"><strong>Output</strong><span>plan / graphs / summaries</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="start">
+        <div class="section-heading">
+          <span class="eyebrow">Quick Start</span>
+          <h2>Startup order</h2>
+          <p>Build the workspace first, then start the gateway, and only then launch the console.</p>
+        </div>
+        <div class="doc-grid">
+          <article class="doc-card">
+            <h3>1. Install and initialize</h3>
+            <p>Create a virtual environment and install the current source tree.</p>
+            <pre><code>python -m venv .venv
+. .venv/bin/activate
+pip install -e .</code></pre>
+          </article>
+          <article class="doc-card">
+            <h3>2. Prepare workspace</h3>
+            <p>These folders store sessions, memory, graphs, and scheduled task state.</p>
+            <pre><code>mkdir -p workspace/sessions
+mkdir -p workspace/memory
+mkdir -p workspace/cron</code></pre>
+          </article>
+          <article class="doc-card">
+            <h3>3. Start gateway</h3>
+            <p>The gateway handles channel connections, agent execution, and message loops.</p>
+            <pre><code>mathclaw gateway \
+  --workspace ./workspace \
+  --channel wecom</code></pre>
+          </article>
+          <article class="doc-card">
+            <h3>4. Start console</h3>
+            <p>The console runs from the console directory, but still points to the repository-level workspace.</p>
+            <pre><code>cd console
+MATHCLAW_CONSOLE_WORKSPACE=../workspace \
+python serve.py</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Workspace Flow</span>
+          <h2>How data moves inside the workspace</h2>
+        </div>
+        <div class="checklist-grid">
+          <article class="checklist-card">
+            <h3>sessions</h3>
+            <p>Stores raw conversations and acts as the first input for all later memory and graph updates.</p>
+            <div class="inline-tags">
+              <span>workspace/sessions</span>
+              <span>jsonl</span>
+            </div>
+          </article>
+          <article class="checklist-card">
+            <h3>daily / weekly memory</h3>
+            <p>Summaries of study state used to generate plans, priority review topics, and key correction directions.</p>
+            <div class="inline-tags">
+              <span>workspace/memory/daily_memory</span>
+              <span>workspace/memory/weekly_memory</span>
+            </div>
+          </article>
+          <article class="checklist-card">
+            <h3>graphs</h3>
+            <p>Knowledge graph and error graph JSON files are rendered directly inside the console graph pages.</p>
+            <div class="inline-tags">
+              <span>workspace/memory/graphs</span>
+              <span>knowledge_graph.json</span>
+              <span>error_graph.json</span>
+            </div>
+          </article>
+          <article class="checklist-card">
+            <h3>cron</h3>
+            <p>Stores task configuration and task status for heartbeat pages and scheduled summary tasks.</p>
+            <div class="inline-tags">
+              <span>workspace/cron/jobs.json</span>
+              <span>heartbeat</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Operator View</span>
+          <h2>What belongs to student pages vs operator pages</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>Student Workspace</h3>
+            <p>Solver, planning, and memory pages focus on learning itself: solving, reviewing, closing gaps, and planning the next move.</p>
+            <img src="../../assets/screenshots/study_plan.png" alt="Study plan screenshot">
+          </article>
+          <article class="faq-card">
+            <h3>Operator Workspace</h3>
+            <p>Runtime, heartbeat, Skills, MCP, and model pages keep deployment, automation, and style management observable.</p>
+            <img src="../../assets/screenshots/runtime_status.png" alt="Runtime status screenshot">
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-strip">
+        <div>
+          <span class="eyebrow">Next</span>
+          <h2>Continue into module breakdowns and real interface previews</h2>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="../modules/">Open Modules</a>
+          <a class="button button-secondary" href="../deploy/">Open Deploy</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>MathClaw Guide. Built for mathematics learning workflows.</p>
+    </footer>
+  </div>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathClaw 部署</title>
+  <meta name="description" content="MathClaw 接入与部署页面：通道、运行链路、部署检查项与常见说明。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/logo.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="../">
+        <img src="../assets/logo.png" alt="MathClaw logo">
+        <span>MathClaw</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav">
+        <a href="../">首页</a>
+        <a href="../guide/">指南</a>
+        <a href="../modules/">模块</a>
+        <a class="is-active" href="./">部署</a>
+        <a href="https://github.com/MathClaw-ruc/MathClaw" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="lang-switch" href="../en/deploy/">EN</a>
+        <button class="theme-toggle" type="button" aria-label="切换主题">◐</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero">
+        <div class="page-hero-copy">
+          <span class="eyebrow">Deploy</span>
+          <h1>把 MathClaw 部署到真实沟通场景里</h1>
+          <p>
+            MathClaw 的部署重点不是单独启动一个 Web 页面，而是让 gateway、console、memory 和 channel
+            在同一工作区里持续运转。这里给出接入方向、运行建议和上线检查项。
+          </p>
+        </div>
+        <div class="page-hero-side">
+          <div class="metric-list">
+            <div class="metric-row"><strong>核心进程</strong><span>gateway + console</span></div>
+            <div class="metric-row"><strong>通道</strong><span>企业微信 / QQ / 飞书 / Web</span></div>
+            <div class="metric-row"><strong>状态页</strong><span>运行状态 + 心跳</span></div>
+            <div class="metric-row"><strong>持久化</strong><span>workspace</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Channels</span>
+          <h2>接入方式</h2>
+        </div>
+        <div class="deploy-grid">
+          <article class="deploy-channel">
+            <h3>企业微信</h3>
+            <p>适合真实教学运营场景，连接稳定后可直接把学习代理投入日常使用。</p>
+          </article>
+          <article class="deploy-channel">
+            <h3>QQ</h3>
+            <p>适合作为补充接入方式，与企业微信共享相同的工作区和记忆链路。</p>
+          </article>
+          <article class="deploy-channel">
+            <h3>飞书</h3>
+            <p>适用于需要额外企业协作入口的场景，可与其他通道并行运行。</p>
+          </article>
+          <article class="deploy-channel">
+            <h3>Web Console</h3>
+            <p>既是管理入口，也是解题工作台的直接使用界面，适合演示与自测。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Checklist</span>
+          <h2>上线检查项</h2>
+        </div>
+        <div class="checklist-grid">
+          <article class="checklist-card">
+            <h3>1. 配置可读</h3>
+            <ul>
+              <li>确认 `~/.mathclaw/config.json` 或对应环境变量可被读取。</li>
+              <li>模型与 provider 路径不要留远端硬编码。</li>
+              <li>console 启动时明确指定 workspace。</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <h3>2. 工作区可写</h3>
+            <ul>
+              <li>`workspace/sessions` 可写入原始对话。</li>
+              <li>`workspace/memory` 可写入 daily / weekly memory。</li>
+              <li>`workspace/cron/jobs.json` 可更新心跳状态。</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <h3>3. 页面可见</h3>
+            <ul>
+              <li>运行状态页返回 200。</li>
+              <li>记忆页中的知识图谱和错题图谱可以加载。</li>
+              <li>Skills 与心跳页能读到当前状态。</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <h3>4. 通道已认证</h3>
+            <ul>
+              <li>企业微信通道完成认证。</li>
+              <li>QQ / 飞书按实际场景启用。</li>
+              <li>只保留需要的通道，避免无效进程常驻。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">FAQ</span>
+          <h2>部署说明</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>控制台和网关为什么要分开启动？</h3>
+            <p>控制台是管理和使用入口，网关负责消息循环与通道接入。分开运行可以避免前端重启时打断通道。</p>
+          </article>
+          <article class="faq-card">
+            <h3>为什么强调 workspace？</h3>
+            <p>因为 sessions、memory、graphs 和 cron 都依赖统一工作区。没有它，记忆、图谱和心跳就无法稳定衔接。</p>
+          </article>
+          <article class="faq-card">
+            <h3>如何确认系统仍然健康？</h3>
+            <p>优先看运行状态页和心跳页；前者看 gateway / console / channel，后者看日总结和周总结是否按计划运行。</p>
+          </article>
+          <article class="faq-card">
+            <h3>Skills 应该什么时候启用？</h3>
+            <p>仅在附件回复场景下启用。它们不会替代正常回答，而是追加一种更贴合教学目的的额外输出框。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>MathClaw Deploy. Built for mathematics learning workflows.</p>
+    </footer>
+  </div>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
