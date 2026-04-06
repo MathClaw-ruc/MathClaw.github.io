@@ -1,0 +1,1 @@
+const s="/screenshots/workspace.png",t="/screenshots/study_plan.png",o="/screenshots/runtime_status.png",n="/screenshots/heartbeat.png",e="/screenshots/knowledge_graph.png",r="/screenshots/error_graph.png",p="/screenshots/skills.png";export{s as _,t as a,o as b,n as c,e as d,r as e,p as f};
