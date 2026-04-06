@@ -1,35 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MathClaw</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #f5f5f5;
-    }
-    .container {
-      text-align: center;
-      padding: 2rem;
-    }
-    img {
-      max-width: 100%;
-      max-height: 90vh;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathClaw | AI Math Learning Studio</title>
+  <meta name="description" content="MathClaw 是一套面向数学学习场景的多通道 AI 学习工作台，连接解题、计划、记忆、图谱与自动总结。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/logo.png">
+  <link rel="stylesheet" href="./assets/site.css">
 </head>
 <body>
-  <div class="container">
-    <img src="Poster.png" alt="MathClaw Poster">
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <img src="./assets/logo.png" alt="MathClaw logo">
+        <span>MathClaw</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="topnav">
+        <a href="#features">功能</a>
+        <a href="#screenshots">预览</a>
+        <a href="#architecture">架构</a>
+        <a href="#quickstart">开始使用</a>
+        <a href="https://github.com/MathClaw-ruc/MathClaw" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="lang-switch" href="./en/">EN</a>
+        <button class="theme-toggle" type="button" aria-label="切换主题">◐</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <span class="eyebrow">Your AI Math Learning Studio</span>
+          <h1>MathClaw</h1>
+          <p class="hero-lead">
+            把图片、PDF、错题、学习计划和自动总结整合进同一个数学学习工作流，
+            让解题、复盘、记忆和督学形成连续闭环。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quickstart">立即开始</a>
+            <a class="button button-secondary" href="#screenshots">查看产品预览</a>
+          </div>
+          <div class="hero-pills">
+            <span>多模态输入</span>
+            <span>结构化学习记忆</span>
+            <span>企业微信 / QQ / 飞书</span>
+            <span>知识图谱 + 错题图谱</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="./assets/poster.png" alt="MathClaw poster">
+            <div class="floating-chip chip-top">7 核心页面</div>
+            <div class="floating-chip chip-bottom">Multi-Channel</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid" id="features">
+        <div class="section-heading">
+          <span class="eyebrow">Feature Matrix</span>
+          <h2>把数学学习拆成可持续运转的产品能力</h2>
+          <p>MathClaw 不是单点问答，而是一整套面向学生工作台与管理工作台的学习系统。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon">▣</span>
+            <h3>解题工作台</h3>
+            <p>支持上传题目图片或 PDF，在单对话工作台内完成诊断、讲解、批改与追问。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">◔</span>
+            <h3>学习计划</h3>
+            <p>把每日状态、明日建议、重点纠错方向和优先复习知识点整理成行动面板。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">◎</span>
+            <h3>双图谱记忆</h3>
+            <p>知识图谱与错题图谱分别追踪结构化知识掌握和高频错误模式。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">◌</span>
+            <h3>多通道接入</h3>
+            <p>可接入企业微信、QQ、飞书等通道，把同一套学习代理运行到真实沟通场景里。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">✦</span>
+            <h3>自动总结与心跳</h3>
+            <p>日总结、周总结和定时任务状态可视化，方便持续跟踪学习节奏是否稳定。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">＋</span>
+            <h3>附件输出 Skill</h3>
+            <p>为附件回复场景增加额外输出风格，让讲解更像竞赛教练、纠因点拨或追问引导。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section overview">
+        <div class="overview-copy">
+          <span class="eyebrow">Why MathClaw</span>
+          <h2>不是只会聊天，而是会沉淀学习状态</h2>
+          <p>
+            MathClaw 将对话、计划、错题、知识图谱与自动总结联结到同一套工作区里。
+            学生可以在一个入口内持续学习，管理侧也能看到稳定性、记忆更新和任务执行情况。
+          </p>
+        </div>
+        <div class="overview-points">
+          <div>
+            <strong>学生工作台</strong>
+            <p>解题、计划、记忆三类核心页面围绕学习本身展开。</p>
+          </div>
+          <div>
+            <strong>系统工作台</strong>
+            <p>运行状态、心跳、Skills、MCP 与模型配置用于管理整套系统。</p>
+          </div>
+          <div>
+            <strong>多通道代理</strong>
+            <p>同一套代理运行于控制台和企业沟通场景，避免前后台割裂。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="screenshots">
+        <div class="section-heading">
+          <span class="eyebrow">Product Preview</span>
+          <h2>真实界面预览</h2>
+          <p>以下截图来自 MathClaw 当前产品界面，展示学生侧与管理侧的核心页面。</p>
+        </div>
+        <div class="screenshot-grid">
+          <figure class="shot-card">
+            <img src="./assets/screenshots/workspace.png" alt="解题工作台">
+            <figcaption>解题工作台</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/screenshots/study_plan.png" alt="学习计划">
+            <figcaption>学习计划</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/screenshots/runtime_status.png" alt="运行状态">
+            <figcaption>运行状态</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/screenshots/heartbeat.png" alt="心跳与自动任务">
+            <figcaption>心跳与自动任务</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/screenshots/knowledge_graph.png" alt="知识图谱">
+            <figcaption>知识图谱</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="./assets/screenshots/error_graph.png" alt="错题图谱">
+            <figcaption>错题图谱</figcaption>
+          </figure>
+          <figure class="shot-card shot-wide">
+            <img src="./assets/screenshots/skills.png" alt="Skills">
+            <figcaption>Skills</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section architecture" id="architecture">
+        <div class="section-heading">
+          <span class="eyebrow">Architecture</span>
+          <h2>把通道、代理、记忆与控制台串成一个学习系统</h2>
+        </div>
+        <div class="flow-board">
+          <div class="flow-step">
+            <span>01</span>
+            <h3>Channels</h3>
+            <p>企业微信、QQ、飞书与控制台统一进入同一套消息循环。</p>
+          </div>
+          <div class="flow-step">
+            <span>02</span>
+            <h3>Math Agent</h3>
+            <p>围绕解题、讲解、批改、追问和附件输出 Skill 进行生成。</p>
+          </div>
+          <div class="flow-step">
+            <span>03</span>
+            <h3>Memory Runtime</h3>
+            <p>把对话转成日记忆、周记忆、知识图谱和错题图谱。</p>
+          </div>
+          <div class="flow-step">
+            <span>04</span>
+            <h3>Console & Heartbeat</h3>
+            <p>以前端工作台和自动任务状态监控来承接管理操作。</p>
+          </div>
+        </div>
+        <div class="architecture-cards">
+          <article class="arch-card">
+            <h3>统一工作区</h3>
+            <p>同一个 workspace 保存 sessions、memory、graphs、cron 与技能配置。</p>
+          </article>
+          <article class="arch-card">
+            <h3>结构化记忆链路</h3>
+            <p>对话先进入原始 session，再被整理成 daily / weekly memory 与图谱数据源。</p>
+          </article>
+          <article class="arch-card">
+            <h3>可控的管理面板</h3>
+            <p>运行状态、心跳、Skills、MCP 与模型配置页保持可见、可读、可维护。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section modules">
+        <div class="section-heading">
+          <span class="eyebrow">Core Modules</span>
+          <h2>核心模块</h2>
+        </div>
+        <div class="details-list">
+          <details open>
+            <summary>🧠 解题工作台</summary>
+            <p>支持单对话模式、图片/PDF 上传、结构化回复和教师风格引导，是学生最直接的主工作区。</p>
+          </details>
+          <details>
+            <summary>📚 学习计划</summary>
+            <p>将每日状态、本周计划、明日建议、复习知识点与纠错方向整理成紧凑的学习面板。</p>
+          </details>
+          <details>
+            <summary>🗺️ 记忆图谱</summary>
+            <p>知识图谱追踪学习结构，错题图谱追踪错误模式，二者共同服务于复盘与补弱。</p>
+          </details>
+          <details>
+            <summary>💓 心跳与自动任务</summary>
+            <p>对日总结、周总结和相关任务进行可视化监控，帮助判断整个系统是否稳定运行。</p>
+          </details>
+          <details>
+            <summary>🧩 Skills</summary>
+            <p>仅在附件回复场景下附加自定义输出框，让讲解语气和结构贴合不同教学风格。</p>
+          </details>
+          <details>
+            <summary>🔌 多通道与 MCP</summary>
+            <p>提供企业沟通通道接入与 MCP 工具连接，让代理可真正部署到外部环境中。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section quickstart" id="quickstart">
+        <div class="section-heading">
+          <span class="eyebrow">Quick Start</span>
+          <h2>快速开始</h2>
+          <p>以下命令基于仓库当前结构，适合直接在源码目录中启动 MathClaw。</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-index">01</span>
+            <h3>安装依赖</h3>
+            <pre><code>python -m venv .venv
+. .venv/bin/activate
+pip install -e .</code></pre>
+          </article>
+          <article class="step-card">
+            <span class="step-index">02</span>
+            <h3>准备工作区</h3>
+            <pre><code>mkdir -p workspace/sessions
+mkdir -p workspace/memory
+mkdir -p workspace/cron</code></pre>
+          </article>
+          <article class="step-card">
+            <span class="step-index">03</span>
+            <h3>启动网关</h3>
+            <pre><code>mathclaw gateway \
+  --workspace ./workspace \
+  --channel wecom</code></pre>
+          </article>
+          <article class="step-card">
+            <span class="step-index">04</span>
+            <h3>启动控制台</h3>
+            <pre><code>cd console
+MATHCLAW_CONSOLE_WORKSPACE=../workspace \
+python serve.py</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-strip">
+        <div>
+          <span class="eyebrow">Open Source</span>
+          <h2>查看仓库、接入通道或继续定制你的数学学习工作流</h2>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/MathClaw-ruc/MathClaw" target="_blank" rel="noreferrer">访问主仓库</a>
+          <a class="button button-secondary" href="https://github.com/MathClaw-ruc/MathClaw/blob/main/README.md" target="_blank" rel="noreferrer">阅读 README</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Released under the MIT License. © 2026 MathClaw. Built for mathematics learning workflows.</p>
+    </footer>
   </div>
+  <script src="./assets/site.js"></script>
 </body>
 </html>
