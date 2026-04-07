@@ -38,8 +38,8 @@
 /* Guide pages keep the doc shell, so make the top chrome quieter and closer to the content surface. */
 .Layout:has(.VPDoc.has-sidebar) {
   background:
-    radial-gradient(circle at 12% 8%, rgba(74, 110, 233, 0.055), transparent 18%),
-    radial-gradient(circle at 48% 0%, rgba(230, 184, 96, 0.028), transparent 12%),
+    radial-gradient(circle at 12% 8%, rgba(74, 110, 233, 0.05), transparent 18%),
+    linear-gradient(90deg, rgba(250, 252, 255, 0.992) 0%, rgba(253, 254, 255, 0.996) 36%, rgba(255, 255, 255, 0.998) 62%, rgba(255, 255, 255, 0.998) 100%),
     linear-gradient(180deg, rgba(250, 252, 255, 0.992), rgba(253, 254, 255, 0.996) 34%, var(--vp-c-bg) 60%);
 }
 
