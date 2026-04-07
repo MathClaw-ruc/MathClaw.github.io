@@ -190,7 +190,11 @@
 }
 
 .VPDoc.has-aside .content-container {
-  max-width: 1400px !important;
+  max-width: 784px !important;
+}
+
+.VPContent.has-sidebar .VPDoc.has-aside .content-container {
+  max-width: 784px !important;
 }
 
 .VPContent.has-sidebar .VPDoc .content-container {
@@ -1366,6 +1370,10 @@
 
   .screen-card--wide {
     grid-column: auto;
+  }
+
+  .VPDoc:not(.has-sidebar) .content {
+    padding: 0 20px 64px;
   }
 
   .page-showcase--reverse .page-showcase__body {
