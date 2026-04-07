@@ -1234,6 +1234,10 @@
   margin-bottom: 8px;
 }
 
+.VPDocFooter .pager {
+  max-width: 960px;
+}
+
 .vp-doc .custom-block {
   border-radius: 20px;
   border: 1px solid var(--mathclaw-card-border);
