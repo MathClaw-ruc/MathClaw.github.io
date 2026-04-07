@@ -1238,15 +1238,6 @@
   margin-bottom: 8px;
 }
 
-.VPDocFooter .pager,
-.prev-next,
-.prev-next .pager {
-  max-width: 480px !important;
-}
-
-.prev-next .pager-link {
-  max-width: 100%;
-}
 
 .vp-doc .custom-block {
   border-radius: 20px;
