@@ -3,7 +3,7 @@ outline: false
 aside: false
 ---
 
-<div class="product-header">
+<div class="product-header product-header--stacked">
   <div class="product-header__copy">
     <span class="section-kicker">产品概览</span>
     <h1>一套产品，串起做题、计划、图谱与回看</h1>
@@ -14,21 +14,25 @@ aside: false
       <span>知识图谱</span>
       <span>错题图谱</span>
       <span>运行状态</span>
-      <span>附加输出</span>
+      <span>心跳调度</span>
+      <span>技能面板</span>
     </div>
   </div>
-  <div class="product-header__stats">
+  <div class="product-header__stats product-header__stats--row">
     <div class="product-stat">
       <strong>7</strong>
-      <span>核心界面，覆盖学生侧与管理侧</span>
+      <span class="product-stat__label">个核心界面</span>
+      <span class="product-stat__desc">覆盖学生工作区与管理控制台</span>
     </div>
     <div class="product-stat">
       <strong>4</strong>
-      <span>连续阶段，从输入到长期回看</span>
+      <span class="product-stat__label">个连续阶段</span>
+      <span class="product-stat__desc">输入 → 运行 → 沉淀 → 回看</span>
     </div>
     <div class="product-stat">
       <strong>3</strong>
-      <span>外部通道，可接入企业微信、QQ、飞书</span>
+      <span class="product-stat__label">个外部通道</span>
+      <span class="product-stat__desc">企业微信 · QQ · 飞书</span>
     </div>
   </div>
 </div>

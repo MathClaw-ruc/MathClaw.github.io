@@ -67,14 +67,10 @@ export default defineConfig({
       ]
     },
     footer: {
-      message: "基于 MIT License 发布。",
-      copyright: "(c) 2026 MathClaw"
+      message: "基于 MIT License 发布",
+      copyright: "© 2026 MathClaw"
     },
-    editLink: {
-      pattern: "https://github.com/MathClaw-ruc/MathClaw/edit/main/docs/:path",
-      text: "在 GitHub 上编辑此页"
-    },
-    outline: {
+outline: {
       label: "本页目录"
     },
     docFooter: {
