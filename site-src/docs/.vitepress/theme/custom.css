@@ -54,12 +54,8 @@
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
-.VPSidebar {
-  background: var(--vp-c-bg) !important;
-}
-
 .VPDoc .aside {
-  background: var(--vp-c-bg);
+  background: transparent;
 }
 
 .VPNavBarTitle .title {
