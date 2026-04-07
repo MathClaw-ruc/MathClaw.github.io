@@ -6,8 +6,8 @@ aside: false
 <div class="product-header product-header--stacked">
   <div class="product-header__copy">
     <span class="section-kicker">产品概览</span>
-    <h1>一套产品，串起做题、计划、图谱与回看</h1>
-    <p>MathClaw 不是单独的聊天页，而是把解题、学习计划、知识图谱、错题图谱和运行管理接成一条连续产品链路。</p>
+    <h1>解题、计划、图谱、管理，一套系统全覆盖</h1>
+    <p>MathClaw 将解题、学习计划、知识图谱和系统管理串联在一起，学生每一次做题都会自动积累为长期学习资产。</p>
     <div class="pill-list">
       <span>解题工作台</span>
       <span>学习计划</span>
@@ -27,7 +27,7 @@ aside: false
     <div class="product-stat">
       <strong>4</strong>
       <span class="product-stat__label">个连续阶段</span>
-      <span class="product-stat__desc">输入 → 运行 → 沉淀 → 回看</span>
+      <span class="product-stat__desc">输入 → 讲解 → 积累 → 回看</span>
     </div>
     <div class="product-stat">
       <strong>3</strong>
@@ -46,9 +46,9 @@ aside: false
 
   <div class="page-showcase">
     <div class="page-showcase__body">
-      <span class="section-kicker">学生入口</span>
-      <h3>解题工作台是整个学习体验的起点</h3>
-      <p>学生在这里上传图片和 PDF，获得分步讲解、批改反馈，并可以连续追问。所有交互记录会自动沉淀为后续记忆的来源。</p>
+      <span class="section-kicker">做题</span>
+      <h3>解题工作台：学习体验的起点</h3>
+      <p>学生在这里上传图片或 PDF，获得分步讲解和批改反馈，并可以连续追问。所有交互记录自动积累，为后续的学习计划和图谱提供数据。</p>
       <ul class="page-checklist">
         <li>支持文本、图片、截图和 PDF 多种输入方式</li>
         <li>做题、讲解和批改集中在同一界面</li>
@@ -62,13 +62,13 @@ aside: false
 
   <div class="page-showcase page-showcase--reverse">
     <div class="page-showcase__body">
-      <span class="section-kicker">行动层</span>
-      <h3>学习计划把记忆结果转成可执行动作</h3>
-      <p>优先复习点、重点纠错方向、明日建议和每周目标都从记忆层自动提取，让学生清楚下一步该做什么。</p>
+      <span class="section-kicker">规划</span>
+      <h3>学习计划：知道下一步该做什么</h3>
+      <p>系统根据历史做题记录，自动生成优先复习点、重点纠错方向、明日建议和每周目标，让学习推进有节奏。</p>
       <ul class="page-checklist">
-        <li>从历史会话中自动提炼优先级和任务顺序</li>
-        <li>每天生成可执行的复习面板</li>
-        <li>学习推进有明确节奏，不再纯靠即时提问</li>
+        <li>从历史记录中自动提炼优先级和任务顺序</li>
+        <li>每天生成可执行的复习计划</li>
+        <li>学习推进有明确节奏，不再纯靠临时提问</li>
       </ul>
     </div>
     <div class="page-showcase__media">
@@ -78,9 +78,9 @@ aside: false
 
   <div class="page-showcase">
     <div class="page-showcase__body">
-      <span class="section-kicker">结构化记忆</span>
-      <h3>知识图谱将学习状态结构化沉淀</h3>
-      <p>通过图结构呈现知识点之间的前置依赖、掌握程度和高频错因，将零散的学习记录转化为可持续追踪的结构化资产。</p>
+      <span class="section-kicker">积累</span>
+      <h3>知识图谱：看清自己的知识全貌</h3>
+      <p>以图结构呈现知识点之间的前置依赖、掌握程度和高频错因，将零散的做题记录转化为清晰的知识网络。</p>
       <ul class="page-checklist">
         <li>可视化知识点之间的前置依赖与掌握情况</li>
         <li>自动归纳高频错因，定位真正的薄弱环节</li>
@@ -94,12 +94,12 @@ aside: false
 
   <div class="page-showcase page-showcase--reverse">
     <div class="page-showcase__body">
-      <span class="section-kicker">管理侧</span>
-      <h3>运行状态与定时任务构成系统控制面</h3>
-      <p>MathClaw 将系统健康度、定时任务节律和技能配置做成独立页面，方便管理员监控和持续运营。</p>
+      <span class="section-kicker">管理</span>
+      <h3>运行监控：系统状态随时掌握</h3>
+      <p>管理员可以实时查看系统健康度、定时任务执行情况和 AI 能力配置，确保系统持续稳定运行。</p>
       <ul class="page-checklist">
-        <li>实时查看 Gateway、Console 和自动任务的运行状态</li>
-        <li>通过定时巡检快速发现异常并定位问题</li>
+        <li>实时查看 Gateway、Console 和各服务的运行状态</li>
+        <li>定时巡检自动发现异常并定位问题</li>
         <li>技能面板集中管理 AI 助手的能力配置</li>
       </ul>
     </div>
@@ -111,30 +111,30 @@ aside: false
 
 <section class="section-block">
   <div class="section-header">
-    <span class="section-kicker">产品链路</span>
-    <h2>四个阶段前后相接，形成完整闭环</h2>
-    <p>每个页面不是孤立存在，而是分别承担输入、运行、沉淀和回看四个阶段，数据在页面之间自然流转。</p>
+    <span class="section-kicker">工作流</span>
+    <h2>四步闭环，数据自动流转</h2>
+    <p>从提交题目到长期复盘，每一步的输出自动成为下一步的输入，无需手动整理。</p>
   </div>
   <div class="timeline-grid">
     <article class="timeline-card">
       <span class="timeline-card__step">01</span>
       <h3>输入</h3>
-      <p>题目、图片和追问从统一入口进入，建立完整的学习上下文。</p>
+      <p>题目、图片和追问从统一入口进入，自动建立完整的学习上下文。</p>
     </article>
     <article class="timeline-card">
       <span class="timeline-card__step">02</span>
-      <h3>运行</h3>
-      <p>AI 助手完成解题、讲解、批改和连续追问，实时输出学习反馈。</p>
+      <h3>讲解</h3>
+      <p>AI 助手完成分步讲解、批改和追问，实时输出针对性学习反馈。</p>
     </article>
     <article class="timeline-card">
       <span class="timeline-card__step">03</span>
-      <h3>沉淀</h3>
-      <p>学习记录自动更新到计划、知识图谱和错题图谱，形成持续积累的学习资产。</p>
+      <h3>积累</h3>
+      <p>每次对话自动更新学习计划、知识图谱和日周总结，持续积累学习资产。</p>
     </article>
     <article class="timeline-card">
       <span class="timeline-card__step">04</span>
       <h3>回看</h3>
-      <p>管理侧通过运行状态和定时巡检掌握系统健康度，持续优化整体运行节律。</p>
+      <p>管理者查看运行状态和学习数据，持续优化系统和学习效果。</p>
     </article>
   </div>
 </section>
