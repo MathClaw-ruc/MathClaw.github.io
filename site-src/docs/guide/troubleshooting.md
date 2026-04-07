@@ -1,9 +1,9 @@
 # 常见问题
 
 <div class="lead-panel">
-  <span class="kicker">管理侧排查</span>
-  <h1>先沿着运行时路径排查，再定位具体故障层</h1>
-  <p>MathClaw 的问题通常不是单独的前端故障，而是 workspace、配置解析、通道凭据或定时任务状态之间的某一层断开。按运行时连接顺序排查会快得多。</p>
+  <span class="kicker">问题排查</span>
+  <h1>按运行时路径逐层排查</h1>
+  <p>MathClaw 的问题通常出在 workspace、配置解析、通道凭据或定时任务状态的某一层。按连接顺序排查最为高效。</p>
 </div>
 
 ## 常见问题类型
@@ -14,12 +14,12 @@
     <p>确认 console 解析的是 <code>~/.mathclaw/config.json</code>，并在需要时显式传入 workspace。</p>
   </div>
   <div class="issue-card">
-    <h3>图谱是空的或长时间不更新</h3>
-    <p>检查 session 写入、memory 生成和 graph JSON 更新时间，确认它们仍在同步。</p>
+    <h3>图谱为空或长时间不更新</h3>
+    <p>检查 session 写入、memory 生成和 graph JSON 的更新时间，确认数据仍在正常同步。</p>
   </div>
   <div class="issue-card">
-    <h3>心跳看起来停住了</h3>
-    <p>先看 <code>workspace/cron/jobs.json</code>，再比较页面刷新时间和最近一次成功总结时间。</p>
+    <h3>定时任务停止执行</h3>
+    <p>查看 <code>workspace/cron/jobs.json</code>，对比页面显示时间与最近一次成功执行时间。</p>
   </div>
 </div>
 
@@ -28,18 +28,18 @@
 <div class="steps-grid">
   <div class="step-card">
     <span class="flow-step">01</span>
-    <h3>先看运行状态</h3>
-    <p>确认 gateway、console、模型 provider 和通道数量仍然正常。</p>
+    <h3>检查运行状态</h3>
+    <p>确认 gateway、console、模型 provider 和通道是否正常。</p>
   </div>
   <div class="step-card">
     <span class="flow-step">02</span>
-    <h3>再看心跳</h3>
-    <p>比较 next run、last run 和 recent result，判断是短时波动还是已经断档。</p>
+    <h3>检查定时任务</h3>
+    <p>对比 next run、last run 和 recent result，判断是短时波动还是已经中断。</p>
   </div>
   <div class="step-card">
     <span class="flow-step">03</span>
     <h3>检查 workspace 文件</h3>
-    <p>重点查看 <code>sessions/</code>、<code>memory/graphs/</code> 和 <code>cron/</code> 是否持续写入。</p>
+    <p>查看 <code>sessions/</code>、<code>memory/graphs/</code> 和 <code>cron/</code> 是否有持续写入。</p>
   </div>
   <div class="step-card">
     <span class="flow-step">04</span>
@@ -50,10 +50,10 @@
 
 <div class="highlight-panel">
   <h2>可移植启动提醒</h2>
-  <p>优先使用仓库相对路径，而不是机器专属绝对路径。这样 console、gateway 和文档更容易在不同机器之间保持一致。</p>
+  <p>建议使用仓库相对路径，方便 console、gateway 和文档在不同机器之间保持一致。</p>
   <ul>
     <li>主配置路径：<code>~/.mathclaw/config.json</code></li>
     <li>控制台启动：<code>cd console && MATHCLAW_CONSOLE_WORKSPACE=../workspace python serve.py</code></li>
-    <li>关键图谱文件：<code>workspace/memory/graphs/knowledge_graph.json</code> 和 <code>workspace/memory/graphs/error_graph.json</code></li>
+    <li>图谱文件：<code>workspace/memory/graphs/knowledge_graph.json</code> 和 <code>error_graph.json</code></li>
   </ul>
 </div>
