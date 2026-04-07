@@ -27,7 +27,7 @@
   --mathclaw-card-border: rgba(255, 255, 255, 0.08);
 }
 
-.Layout {
+.Layout:has(.VPHome) {
   background:
     radial-gradient(circle at 12% 10%, var(--mathclaw-glow-a), transparent 28%),
     radial-gradient(circle at 88% 12%, var(--mathclaw-glow-b), transparent 24%),
@@ -35,7 +35,7 @@
     linear-gradient(180deg, rgba(241, 246, 255, 0.92), rgba(247, 251, 255, 0.98) 34%, var(--vp-c-bg) 60%);
 }
 
-.dark .Layout {
+.dark .Layout:has(.VPHome) {
   background:
     radial-gradient(circle at 14% 10%, var(--mathclaw-glow-a), transparent 26%),
     radial-gradient(circle at 86% 12%, var(--mathclaw-glow-b), transparent 22%),
