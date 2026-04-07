@@ -35,12 +35,12 @@
     linear-gradient(180deg, rgba(241, 246, 255, 0.92), rgba(247, 251, 255, 0.98) 34%, var(--vp-c-bg) 60%);
 }
 
-/* Guide pages have a right-side aside column — remove the right glow so it doesn't bleed through */
-.Layout:has(.VPDoc.has-aside) {
+/* Guide pages keep the doc shell, so make the top chrome quieter and closer to the content surface. */
+.Layout:has(.VPDoc.has-sidebar) {
   background:
-    radial-gradient(circle at 12% 10%, var(--mathclaw-glow-a), transparent 28%),
-    radial-gradient(circle at 50% 0%, var(--mathclaw-glow-c), transparent 24%),
-    linear-gradient(180deg, rgba(241, 246, 255, 0.92), rgba(247, 251, 255, 0.98) 34%, var(--vp-c-bg) 60%);
+    radial-gradient(circle at 14% 10%, rgba(74, 110, 233, 0.09), transparent 22%),
+    radial-gradient(circle at 50% 0%, rgba(230, 184, 96, 0.05), transparent 18%),
+    linear-gradient(180deg, rgba(248, 250, 255, 0.98), rgba(252, 253, 255, 0.99) 34%, var(--vp-c-bg) 60%);
 }
 
 .dark .Layout {
@@ -51,11 +51,11 @@
     linear-gradient(180deg, rgba(14, 19, 33, 0.96), rgba(12, 17, 29, 0.99) 34%, var(--vp-c-bg) 64%);
 }
 
-.dark .Layout:has(.VPDoc.has-aside) {
+.dark .Layout:has(.VPDoc.has-sidebar) {
   background:
-    radial-gradient(circle at 14% 10%, var(--mathclaw-glow-a), transparent 26%),
-    radial-gradient(circle at 50% 0%, var(--mathclaw-glow-c), transparent 18%),
-    linear-gradient(180deg, rgba(14, 19, 33, 0.96), rgba(12, 17, 29, 0.99) 34%, var(--vp-c-bg) 64%);
+    radial-gradient(circle at 14% 10%, rgba(68, 106, 224, 0.14), transparent 20%),
+    radial-gradient(circle at 50% 0%, rgba(233, 186, 91, 0.04), transparent 14%),
+    linear-gradient(180deg, rgba(15, 20, 34, 0.98), rgba(13, 18, 30, 0.99) 34%, var(--vp-c-bg) 64%);
 }
 
 .VPNavBar {
@@ -71,6 +71,46 @@
 
 .VPDoc .aside {
   background: transparent;
+}
+
+.Layout:has(.VPDoc.has-sidebar) .VPSidebar,
+.Layout:has(.VPDoc.has-sidebar) .VPLocalNav {
+  background: rgba(249, 251, 255, 0.92);
+}
+
+.Layout:has(.VPDoc.has-sidebar) .VPSidebar {
+  border-right: 1px solid rgba(129, 145, 184, 0.08);
+}
+
+.Layout:has(.VPDoc.has-sidebar) .VPSidebar .curtain {
+  background: linear-gradient(180deg, rgba(249, 251, 255, 0.96), rgba(249, 251, 255, 0.88));
+}
+
+.Layout:has(.VPDoc.has-sidebar) .VPSidebar .nav {
+  padding-left: 20px;
+  padding-right: 22px;
+}
+
+.Layout:has(.VPDoc.has-sidebar) .VPNavBar .divider-line,
+.Layout:has(.VPDoc.has-sidebar) .VPLocalNav {
+  border-color: rgba(129, 145, 184, 0.08);
+}
+
+.Layout:has(.VPDoc.has-sidebar) .VPDocAsideOutline .content {
+  background: transparent;
+}
+
+.dark .Layout:has(.VPDoc.has-sidebar) .VPSidebar,
+.dark .Layout:has(.VPDoc.has-sidebar) .VPLocalNav {
+  background: rgba(18, 25, 40, 0.88);
+}
+
+.dark .Layout:has(.VPDoc.has-sidebar) .VPSidebar {
+  border-right-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark .Layout:has(.VPDoc.has-sidebar) .VPSidebar .curtain {
+  background: linear-gradient(180deg, rgba(18, 25, 40, 0.94), rgba(18, 25, 40, 0.84));
 }
 
 .VPNavBarTitle .title {
