@@ -43,7 +43,7 @@ hero:
 <section class="surface-panel">
   <div class="surface-panel__copy">
     <span class="section-kicker">为什么选 MathClaw</span>
-    <h2>不只是聊天，而是完整的数学学习工作台</h2>
+    <h2>不只是聊天，而是完整的数学<br>学习工作台</h2>
     <p>学生在前台做题、追问、复盘；管理者在后台查看学习进度、调整计划、监控系统——两侧数据互通，体验连贯。</p>
     <div class="pill-list">
       <span>解题工作台</span>
