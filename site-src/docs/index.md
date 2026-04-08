@@ -3,8 +3,12 @@ layout: home
 
 hero:
   name: MathClaw
-  text: AI 数学学习助手，从解题到复盘全程覆盖
-  tagline: 拍题、讲解、批改、追问、学习计划、知识图谱——一个工作台完成，不再来回切换。
+  text: |-
+    AI 数学学习助手
+    从解题到复盘全程覆盖
+  tagline: |-
+    拍题、讲解、批改、追问、学习计划、知识图谱
+    ——一个工作台完成，不再来回切换。
   image:
     src: /screenshots/workspace.png
     alt: MathClaw 工作台界面
@@ -16,6 +20,7 @@ hero:
       text: 快速开始
       link: /guide/pre-config
 ---
+
 
 <div class="signal-grid">
   <article class="signal-card">
